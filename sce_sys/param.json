@@ -11,7 +11,7 @@
   "applicationDrmType": "free",
   "attribute": 1644167168,
   "attribute2": 0,
-  "attribute3": 1048576,
+  "attribute3": 5242880,
   "conceptId": "99004",
   "contentBadgeType": 1,
   "contentId": "UP9000-PPSA99004_00-PS5COMPUTEPROBE1",
@@ -31,7 +31,7 @@
   "localizedParameters": {
     "defaultLanguage": "en-US",
     "en-US": {
-      "titleName": "ProsperoAI"
+      "titleName": "ProsperoAI Pro (unofficial)"
     }
   },
   "masterVersion": "01.00",

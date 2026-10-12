@@ -1,0 +1,6 @@
+# ProsperoAI Pro (unofficial build) settings. One KEY=VALUE per line; # starts a comment.
+# Read once at app start: change this file, then close and reopen the app.
+#
+# llama.cpp mat-vec tuning for the PS5 Pro GPU (docs/PS5_PRO_TUNING.md):
+GGML_VK_PS5_DMMV_WG=1
+GGML_VK_PS5_DMMV_SUBGROUP=32

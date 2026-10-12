@@ -2,6 +2,13 @@
   <a href="sce_sys/icon0.png"><img src="sce_sys/icon0.png" width="128" alt="ProsperoAI golden doorway icon used on PS5"></a>
 </p>
 
+> [!CAUTION]
+> **This is the `ps5pro` branch of an unofficial fork**, tuned for the PS5 Pro
+> (86.9 -> 96.6 tokens/s with Mistral 7B Q4_0, plus Pro memory mode). It is not
+> made or supported by the ProsperoAI author. See
+> [release/ps5pro/README.md](release/ps5pro/README.md) for what changed; the
+> original project is https://github.com/blackbearreloaded/ProsperoAI.
+
 <h1 align="center">ProsperoAI</h1>
 
 <p align="center">

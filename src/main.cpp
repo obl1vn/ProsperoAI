@@ -271,7 +271,9 @@ int main()
 #endif
             // Once per launch: is a newer version listed (include/update.hpp). A scripted
             // run asks only when its request says "updates on".
-            if (!script.active() || script.updates())
+            // Unofficial PS5 Pro build: no update check, because an official update would
+            // replace this build (release/ps5pro/README.md).
+            if (script.active() && script.updates())
                 prospero::update::check();
             first_frame = false;
         }

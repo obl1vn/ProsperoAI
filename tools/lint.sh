@@ -50,8 +50,10 @@ if not re.fullmatch(r"\d{2}\.\d{2}", param.get("masterVersion", "")):
     raise SystemExit("param.json masterVersion must use NN.NN")
 # What the console's video control reads at launch (docs/BUILDING.md, "Launch metadata"):
 # with other values it changes the television's video mode, a second or two of black.
-if param.get("attribute") != 0x62000000 or param.get("attribute3") != 0x100000:
-    raise SystemExit("param.json attribute and attribute3 must stay 0x62000000 and 0x100000")
+# The PS5 Pro build adds bit 22 (0x400000): a larger memory pool on a PS5 Pro, no video
+# mode change (release/ps5pro/README.md).
+if param.get("attribute") != 0x62000000 or param.get("attribute3") not in (0x100000, 0x500000):
+    raise SystemExit("param.json attribute and attribute3 must stay 0x62000000 and 0x100000 (or 0x500000)")
 size = param.get("downloadDataSize")
 if isinstance(size, bool) or not isinstance(size, int) or size < 0:
     raise SystemExit("param.json downloadDataSize must be a non-negative integer")

@@ -12,6 +12,8 @@ root=Path(sys.argv[1]);title=sys.argv[2];target=root/'dist'/title
 if target.exists(): shutil.rmtree(target)
 shutil.copytree(root/'build/vulkan-runtime'/title,target)
 (target/'models').mkdir()
+for name in ('vulkan_env.txt','batch_size.txt','ubatch_size.txt','ui_sleep_ms.txt','README.md'):
+    shutil.copy(root/'release/ps5pro'/name,target/name)
 shutil.copy(root/'models/README.txt',target/'models/README.txt')
 (target/'INSTALL.txt').write_text('ProsperoAI '+title+'\n\nUpload this folder to /data/homebrew/'+title+'.\nModels, settings, conversations and logs are kept in /data/prosperoai; the app asks Lapy for that access at launch (a running Lapy service, or its own lapy.elf through the console-local ELF loader).\nRegister the app folder with your homebrew loader, then launch ProsperoAI.\nModels can be downloaded in Models or copied to /data/homebrew/prosperoai/models.\nText uses GGUF files; media uses the complete curated prepared folders.\nThe HTTP interface is at http://<PS5-IP>:11434/.\n')
 archive=root/'dist'/f'{title}.zip'
